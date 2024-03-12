@@ -10,7 +10,7 @@ import {
   PreviewCard,
 } from "../../components/Component";
 import Logo from "../../images/logo.png";
-import LogoDark from "../../images/logo-dark.png";
+import LogoDark from "../../images/tvpms-logo.png";
 import { Form,  Spinner, Alert } from "reactstrap";
 import PageContainer from "../../layout/page-container/PageContainer";
 import Head from "../../layout/head/Head";
@@ -96,7 +96,7 @@ const Login = () => {
           <div className="brand-logo pb-4 text-center">
             <Link to={process.env.PUBLIC_URL + "/"} className="logo-link">
               <img className="logo-light logo-img logo-img-lg" src={Logo} alt="logo" />
-              <img className="logo-dark logo-img logo-img-lg" src={LogoDark} alt="logo-dark" />
+              <img className="logo-dark logo-img logo-img-lg" src={LogoDark} alt="tvpms-logo" />
             </Link>
           </div>
 
@@ -105,7 +105,7 @@ const Login = () => {
               <BlockContent>
                 <BlockTitle tag="h4">Login</BlockTitle>
                 <BlockDes>
-                  <p>Access Vendingc dasboard using your email and password.</p>
+                  <p>Access The Village Public Model School dasboard using your email and password.</p>
                 </BlockDes>
               </BlockContent>
             </BlockHead>
