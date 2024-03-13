@@ -26,14 +26,14 @@ const AdminPages = () => {
   return (
     <Suspense fallback={<div />}>
       <Switch>
-        <Route exact path={`/product-list`} component={List}></Route>
+        {/* <Route exact path={`/product-list`} component={List}></Route>
         <Route exact path={`/machine-list`} component={MachineList}></Route>
 
         <Route exact path={`/transaction-list`} component={TransactionList}></Route>
         <Route exact path={`/product-transaction-list`} component={ProductTransactionList}></Route>
         <Route exact path={`/payment-transaction-list`} component={PaymentTransactionList}></Route>
         
-        <Route exact path={`/company-list`} component={CompanyList}></Route>
+        <Route exact path={`/company-list`} component={CompanyList}></Route> */}
         <Route exact path={`/user-list`} component={UserList}></Route>
 
         {/* <Route //Context Api added

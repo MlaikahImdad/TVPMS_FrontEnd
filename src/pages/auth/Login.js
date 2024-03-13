@@ -39,7 +39,7 @@ const Login = () => {
       email: formData.name,
       password: formData.passcode,
     }).then(res => {
-      sessionStorage.setItem("accessToken", res.data.accessToken)
+      sessionStorage.setItem("access_token", res.data.access_token)
       sessionStorage.setItem("user", JSON.stringify(res.data.user))
       sessionStorage.setItem("role", res.data.user.role)
       // let temp = roles.filter(role => role.id === res.data.user.roleId)
@@ -67,7 +67,7 @@ const Login = () => {
     // let loginName = "string"
     // let pass = "string"
     // if (formData.name === loginName && formData.passcode === pass) {
-    //   sessionStorage.setItem("accessToken", "token");
+    //   sessionStorage.setItem("access_token", "token");
     //   sessionStorage.setItem("role", "admin");
     //   // sessionStorage.setItem("role", "merchant");
     //   setTimeout(() => {

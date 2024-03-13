@@ -14,7 +14,7 @@ const User = () => {
   const [user, setUser] = useState('')
 
   const handleSignout = () => {
-    sessionStorage.removeItem("accessToken");
+    sessionStorage.removeItem("access_token");
   };
 
 

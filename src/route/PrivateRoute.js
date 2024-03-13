@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
 
-const auth = sessionStorage.getItem("accessToken");
+const auth = sessionStorage.getItem("access_token");
 
 const PrivateRoute = ({ exact, component: Component, ...rest }) => (
   <Route

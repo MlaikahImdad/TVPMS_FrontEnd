@@ -5,12 +5,10 @@ export const variables = {
     searchableColumns: ["name","email","phoneNo"],
     actions: false,
     create: {
-        name:"",
-        email:"",
-        password:"",
-        phoneNumber:"",
-        roleId:"",
-        companyId:"",
+      name: "",
+      email: "",
+      password: "",
+      role: ""
     },
     
     api: {
