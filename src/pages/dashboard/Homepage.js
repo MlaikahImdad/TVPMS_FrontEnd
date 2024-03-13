@@ -7,7 +7,7 @@ import StoreStatistics from "src/components/partials/default/StoreStatistics";
 import RecentOrders from "src/components/partials/default/recent-orders/RecentOrders";
 import TopProducts from "src/components/partials/default/top-products/TopProducts";
 import DataCard from "src/components/partials/default/DataCard";
-import { DropdownToggle, DropdownMenu, UncontrolledDropdown, DropdownItem, Card } from "reactstrap";
+import { DropdownToggle, DropdownMenu, UncontrolledDropdown, DropdownItem } from "reactstrap";
 import {
   Block,
   BlockHead,
@@ -18,7 +18,6 @@ import {
   Row,
   Col,
   BlockBetween,
-  Map
 } from "src/components/Component";
 import {
   DefaultCustomerChart,
@@ -26,8 +25,6 @@ import {
   DefaultRevenueChart,
   DefaultVisitorChart,
 } from "src/components/partials/charts/default/DefaultCharts";
-
-// import OLMap from "./OLMap";
 
 const Homepage = () => {
   const [sm, updateSm] = useState(false);
@@ -42,84 +39,78 @@ const Homepage = () => {
                 Dashboard
               </BlockTitle>
             </BlockHeadContent>
-            <BlockHeadContent></BlockHeadContent>
+            <BlockHeadContent>
+              <div className="toggle-wrap nk-block-tools-toggle">
+                <Button
+                  className={`btn-icon btn-trigger toggle-expand me-n1 ${sm ? "active" : ""}`}
+                  onClick={() => updateSm(!sm)}
+                >
+                  <Icon name="more-v" />
+                </Button>
+                <div className="toggle-expand-content" style={{ display: sm ? "block" : "none" }}>
+                  <ul className="nk-block-tools g-3">
+                    <li>
+                      <UncontrolledDropdown>
+                        <DropdownToggle tag="a" className="dropdown-toggle btn btn-white btn-dim btn-outline-light">
+                          <Icon className="d-none d-sm-inline" name="calender-date" />
+                          <span>
+                            <span className="d-none d-md-inline">Last</span> 30 Days
+                          </span>
+                          <Icon className="dd-indc" name="chevron-right" />
+                        </DropdownToggle>
+                        <DropdownMenu end>
+                          <ul className="link-list-opt no-bdr">
+                            <li>
+                              <DropdownItem
+                                tag="a"
+                                onClick={(ev) => {
+                                  ev.preventDefault();
+                                }}
+                                href="#!"
+                              >
+                                <span>Last 30 days</span>
+                              </DropdownItem>
+                            </li>
+                            <li>
+                              <DropdownItem
+                                tag="a"
+                                onClick={(ev) => {
+                                  ev.preventDefault();
+                                }}
+                                href="#dropdownitem"
+                              >
+                                <span>Last 6 months</span>
+                              </DropdownItem>
+                            </li>
+                            <li>
+                              <DropdownItem
+                                tag="a"
+                                onClick={(ev) => {
+                                  ev.preventDefault();
+                                }}
+                                href="#dropdownitem"
+                              >
+                                <span>Last 3 weeks</span>
+                              </DropdownItem>
+                            </li>
+                          </ul>
+                        </DropdownMenu>
+                      </UncontrolledDropdown>
+                    </li>
+                    <li className="nk-block-tools-opt">
+                      <Button color="primary">
+                        <Icon name="reports" />
+                        <span>Reports</span>
+                      </Button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </BlockHeadContent>
           </BlockBetween>
         </BlockHead>
         <Block>
           <Row className="g-gs">
-            <Col xxl="4">
-              <Card className="card-bordered w-100 h-100">
-                {/* <OLMap width="100%" height="60vh" /> */}
-                <Map style={{width:"100%",height:"60vh"}} center={[31.4726215,74.4058758]} markers={[{coord:[31.4726215,74.4058258],active: true},{coord:[31.4726213,74.4058753],active: false}]} zoom={15}/>
-              </Card>
-            </Col>
-
-            <div className="toggle-wrap nk-block-tools-toggle">
-              <Button
-                className={`btn-icon btn-trigger toggle-expand me-n1 ${sm ? "active" : ""}`}
-                onClick={() => updateSm(!sm)}
-              >
-                <Icon name="more-v" />
-              </Button>
-              <div className="toggle-expand-content" style={{ display: sm ? "block" : "none" }}>
-                <ul className="nk-block-tools g-3">
-                  <li>
-                    <UncontrolledDropdown>
-                      <DropdownToggle tag="a" className="dropdown-toggle btn btn-white btn-dim btn-outline-light">
-                        <Icon className="d-none d-sm-inline" name="calender-date" />
-                        <span>
-                          <span className="d-none d-md-inline">Last</span> 30 Days
-                        </span>
-                        <Icon className="dd-indc" name="chevron-right" />
-                      </DropdownToggle>
-                      <DropdownMenu end>
-                        <ul className="link-list-opt no-bdr">
-                          <li>
-                            <DropdownItem
-                              tag="a"
-                              onClick={(ev) => {
-                                ev.preventDefault();
-                              }}
-                              href="#!"
-                            >
-                              <span>Last 30 days</span>
-                            </DropdownItem>
-                          </li>
-                          <li>
-                            <DropdownItem
-                              tag="a"
-                              onClick={(ev) => {
-                                ev.preventDefault();
-                              }}
-                              href="#dropdownitem"
-                            >
-                              <span>Last 6 months</span>
-                            </DropdownItem>
-                          </li>
-                          <li>
-                            <DropdownItem
-                              tag="a"
-                              onClick={(ev) => {
-                                ev.preventDefault();
-                              }}
-                              href="#dropdownitem"
-                            >
-                              <span>Last 3 weeks</span>
-                            </DropdownItem>
-                          </li>
-                        </ul>
-                      </DropdownMenu>
-                    </UncontrolledDropdown>
-                  </li>
-                  <li className="nk-block-tools-opt">
-                    <Button color="primary">
-                      <Icon name="reports" />
-                      <span>Reports</span>
-                    </Button>
-                  </li>
-                </ul>
-              </div>
-            </div>
             <Col xxl="3" sm="6">
               <DataCard
                 title="Today's Order"

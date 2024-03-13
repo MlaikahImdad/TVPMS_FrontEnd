@@ -7,7 +7,7 @@ import AdminPages from "./AdminRoute";
 const role = sessionStorage.getItem("role");
 const Pages = () => {
   switch (role) {
-    case "Admin":
+    case "admin":
       return <AdminPages/>;
     // case "Operator":
     //   return <OperatorPages/>

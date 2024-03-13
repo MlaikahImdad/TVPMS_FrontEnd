@@ -14,7 +14,7 @@ import UserList from "src/pages/users/UserList";
 
 
 
-import Homepage from "src/pages/dashboard/AdminHomepage";
+import Homepage from "src/pages/dashboard/Homepage";
 import { RedirectAs404 } from "src/utils/Utils";
 
 
