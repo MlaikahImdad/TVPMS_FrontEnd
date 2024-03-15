@@ -174,32 +174,7 @@ const Add = (props) => {
                 </div>
               </Col>
               
-              <Col size="6">
-                <div className="form-group">
-                  <label className="form-label" htmlFor="companyId">
-                  {variables.name} Company
-                  </label>
-                  <div className="form-control-wrap">
-                    <div className="form-control-select">
-                      <select
-                        ref={props.register()}
-                        className="form-control form-select"
-                        id="companyId"
-                        name="companyId"
-                        placeholder="Select a option"
-                        defaultValue={props.formData.companyId}
-                      >
-                        {/* <option label="Select a topic" value=""></option> */}
-                        {props.companies.map((company,key) => {
-                          return <option value={company.companyId} key={key}>{company.name}</option>
-                        })}
-                        
-                      </select>
-                      {props.errors.companyId && <span className="invalid">{props.errors.companyId.message}</span>}
-                    </div>
-                  </div>
-                </div>
-              </Col>
+              
               
 
               <Col size="12">

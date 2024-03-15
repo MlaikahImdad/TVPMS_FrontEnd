@@ -44,17 +44,8 @@ const Show = (props) => {
                     <span className="caption-text">{props.formData.phoneNumber}</span>
                 </Col>
                 <Col lg={6}>
-                    <span className="sub-text">Company</span>
-                    <span className="caption-text"> {
-                        ((companyId) => {
-                            let name = ""
-                            let temp = props.companies.filter(company => company.companyId === companyId)
-                            if (temp.length > 0){
-                              name = temp[0].name
-                            }
-                            return name
-                        })(props.formData.companyId)
-                    }</span>
+                    
+                    
                 </Col>
                 <Col lg={6}>
                     <span className="sub-text">Role</span>

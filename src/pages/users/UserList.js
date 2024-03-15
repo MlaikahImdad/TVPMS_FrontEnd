@@ -28,7 +28,6 @@ import { variables } from "./UserVariables";
 
 const List = () => {
   const [data, setData] = useState([]);
-  const [companies, setCompanies] = useState([]);
   const [roles, setRoles] = useState([]);
 
   const { errors, register, handleSubmit, reset, watch } = useForm();
@@ -43,25 +42,7 @@ const List = () => {
 
   const dataTableColumns = [
     ...variables.columns,
-    {
-      name: "Company",
-      selector: (row) => row.companyId,
-      sortable: true,
-      cell: (row) => (
-        <span>
-          {
-            ((row) => {
-              let name = ""
-              let temp = companies.filter(company => company.companyId === row.companyId)
-              if (temp.length > 0){
-                name = temp[0].name
-              }
-              return name
-            })(row)
-          }
-        </span>
-      )
-    },
+   
     {
       name: "Role",
       selector: (row) => row.role,
@@ -347,7 +328,7 @@ const List = () => {
         <Update
           view={view}
           uploading={uploading}
-          companies={companies}
+         
           roles={roles}
           onFormCancel={onFormCancel}
           handleSubmit={handleSubmit}
@@ -362,11 +343,11 @@ const List = () => {
           files={files}
         />
 
-        <Show view={view} onFormCancel={onFormCancel} companies={companies} roles={roles} formData={formData} />
+        <Show view={view} onFormCancel={onFormCancel} roles={roles} formData={formData} />
         <Add
           view={view}
           uploading={uploading}
-          companies={companies}
+
           roles={roles}
           dropzoneError={dropzoneError}
           handleSubmit={handleSubmit}
