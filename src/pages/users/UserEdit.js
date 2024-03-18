@@ -81,7 +81,7 @@ const Update = (props) => {
                   </div>
                 </Col>
                 
-                <Col md="6">
+                 {/* <Col md="6">
                   <div className="form-group">
                     <label className="form-label" htmlFor="phoneNumber">
                       Phone Number
@@ -97,7 +97,7 @@ const Update = (props) => {
                       {props.errors.phoneNumber && <span className="invalid">{props.errors.phoneNumber.message}</span>}
                     </div>
                   </div>
-                </Col>
+                </Col>  */}
                 <Col md="6">
                 <div className="form-group">
                   <label className="form-label" htmlFor="password">

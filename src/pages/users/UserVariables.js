@@ -2,7 +2,7 @@
 export const variables = {
     name: "User",
     id: "id",
-    searchableColumns: ["name","email","phoneNo"],
+    searchableColumns: ["name","email"],
     actions: false,
     create: {
       name: "",
@@ -29,11 +29,11 @@ export const variables = {
           selector: (row) => row.email,
           sortable: true,
         },
-        {
-          name: "Phone Number",
-          selector: (row) => row.phoneNumber,
-          sortable: true,
-        },
+        // {
+        //   name: "Phone Number",
+        //   selector: (row) => row.phoneNumber,
+        //   sortable: true,
+        // },
         
       ]
 

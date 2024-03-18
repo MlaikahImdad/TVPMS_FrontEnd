@@ -39,10 +39,10 @@ const Show = (props) => {
                     <span className="sub-text">{variables.name} Email</span>
                     <span className="caption-text">{props.formData.email}</span>
                 </Col>
-                <Col lg={6}>
+                {/* /* <Col lg={6}>
                     <span className="sub-text">Phone Number</span>
                     <span className="caption-text">{props.formData.phoneNumber}</span>
-                </Col>
+            </Col> */ }
                 <Col lg={6}>
                     
                     

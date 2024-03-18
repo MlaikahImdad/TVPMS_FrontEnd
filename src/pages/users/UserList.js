@@ -140,12 +140,12 @@ const List = () => {
       setData(res.data);
       setLoading(false);
     });
-    api.get("/company").then((res_s) => {
-      setCompanies(res_s.data);
-    });
-    api.get("/users/GetUserRoles").then((res_st) => {
-      setRoles(res_st.data);
-    });
+    // api.get("/company").then((res_s) => {
+    //   setCompanies(res_s.data);
+    // });
+    // api.get("/users/GetUserRoles").then((res_st) => {
+    //   setRoles(res_st.data);
+    // });
   }, []);
 
   // OnChange function to get the input data
