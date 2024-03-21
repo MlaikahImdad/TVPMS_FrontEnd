@@ -43,25 +43,25 @@ const List = () => {
   const dataTableColumns = [
     ...variables.columns,
    
-    {
-      name: "Role",
-      selector: (row) => row.role,
-      sortable: true,
-      cell: (row) => (
-        <span>
-          {
-            ((row) => {
-              let name = ""
-              let temp = roles.filter(role => role.id === row.roleId)
-              if (temp.length > 0){
-                name = temp[0].role
-              }
-              return name
-            })(row)
-          }
-        </span>
-      )
-    },
+    // {
+    //   name: "Role",
+    //   selector: (row) => row.role,
+    //   sortable: true,
+    //   cell: (row) => (
+    //     <span>
+    //       {
+    //         ((row) => {
+    //           let name = ""
+    //           let temp = roles.filter(role => role.id === row.roleId)
+    //           if (temp.length > 0){
+    //             name = temp[0].role
+    //           }
+    //           return name
+    //         })(row)
+    //       }
+    //     </span>
+    //   )
+    // },
     {
       name: "Actions",
       selector: (row) => row[variables.id],

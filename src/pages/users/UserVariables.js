@@ -34,7 +34,16 @@ export const variables = {
         //   selector: (row) => row.phoneNumber,
         //   sortable: true,
         // },
-        
+        {
+          name: "Role",
+          selector: (row) => row.role,
+          sortable: true,
+        }, 
+        {
+          name: "Created Date",
+          selector: (row) => row.date,
+          sortable: true,
+        },
       ]
 
 }

@@ -44,10 +44,11 @@ const Show = (props) => {
                     <span className="caption-text">{props.formData.phoneNumber}</span>
             </Col> */ }
                 <Col lg={6}>
+                    <span className="sub-text">{variables.name} Role</span>
+                    <span className="caption-text">{props.formData.role}</span>
+                </Col>    
                     
-                    
-                </Col>
-                <Col lg={6}>
+                {/* <Col lg={6}>
                     <span className="sub-text">Role</span>
                     <span className="caption-text"> {
                         ((roleId) => {
@@ -59,7 +60,7 @@ const Show = (props) => {
                             return name
                         })(props.formData.roleId)
                     }</span>
-                </Col>
+                </Col> */}
                 </Row>
             </div>
             </ModalBody>
