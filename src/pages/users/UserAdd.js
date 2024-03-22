@@ -145,7 +145,7 @@ const Add = (props) => {
                   </div>
                 </div>
               </Col>
-              <Col size="6">
+              {/* <Col size="6">
                 <div className="form-group">
                   <label className="form-label" htmlFor="roleId">
                   {variables.name} Role
@@ -163,7 +163,7 @@ const Add = (props) => {
                         defaultValue={props.formData.roleId}
                       >
                         {/* <option label="Select a topic" value=""></option> */}
-                        {props.roles.map((role,key) => {
+                        {/* {props.roles.map((role,key) => {
                           return <option value={role.id} key={key}>{role.role}</option>
                         })}
                         
@@ -172,8 +172,27 @@ const Add = (props) => {
                     </div>
                   </div>
                 </div>
-              </Col>
-              
+              </Col> */} 
+             <Col size="12">
+                <div className="form-group">
+                  <label className="form-label" htmlFor="product-name">
+                  {variables.name} Role 
+                  </label>
+                  <div className="form-control-wrap">
+                    <input
+                      type="text"
+                      className="form-control"
+                      name="role"
+                      onChange={(e) => props.onInputChange(e)}
+                      ref={props.register({
+                        required: "This field is required",
+                      })}
+                      defaultValue={props.formData.role}
+                    />
+                    {props.errors.role && <span className="invalid">{props.errors.role.message}</span>}
+                  </div>
+                </div>
+              </Col> 
               
               
 
